@@ -1,0 +1,15 @@
+C:\Users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\Infrastructure\bin\Debug\Infrastructure.dll.config
+C:\Users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\Infrastructure\bin\Debug\Infrastructure.dll
+C:\Users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\Infrastructure\bin\Debug\Infrastructure.pdb
+C:\Users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\Infrastructure\bin\Debug\ApplicationCore.dll
+C:\Users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\Infrastructure\bin\Debug\EntityFramework.dll
+C:\Users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\Infrastructure\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\Infrastructure\bin\Debug\ApplicationCore.pdb
+C:\Users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\Infrastructure\bin\Debug\ApplicationCore.dll.config
+C:\Users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\Infrastructure\bin\Debug\EntityFramework.xml
+C:\Users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\Infrastructure\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\Infrastructure\obj\Debug\Infrastructure.csprojResolveAssemblyReference.cache
+C:\Users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\Infrastructure\obj\Debug\Infrastructure.Migrations.AddTransaction.resources
+C:\Users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\Infrastructure\obj\Debug\Infrastructure.csproj.GenerateResource.Cache
+C:\Users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\Infrastructure\obj\Debug\Infrastructure.dll
+C:\Users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\Infrastructure\obj\Debug\Infrastructure.pdb

@@ -1,0 +1,12 @@
+C:\Users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\FinancialManagerSystem.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\FinancialManagerSystem.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\FinancialManagerSystem.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\FinancialManagerSystem.Tests\bin\Debug\FinancialManagerSystem.Tests.dll
+C:\Users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\FinancialManagerSystem.Tests\bin\Debug\FinancialManagerSystem.Tests.pdb
+C:\Users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\FinancialManagerSystem.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\FinancialManagerSystem.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\FinancialManagerSystem.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\FinancialManagerSystem.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\FinancialManagerSystem.Tests\obj\Debug\FinancialManagerSystem.Tests.dll
+C:\Users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\FinancialManagerSystem.Tests\obj\Debug\FinancialManagerSystem.Tests.pdb
+C:\Users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\FinancialManagerSystem.Tests\obj\Debug\Tests.csprojResolveAssemblyReference.cache

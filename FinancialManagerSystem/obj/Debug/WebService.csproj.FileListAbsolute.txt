@@ -1,0 +1,8 @@
+c:\users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\FinancialManagerSystem\bin\FinancialManagerSystem.dll.config
+c:\users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\FinancialManagerSystem\bin\FinancialManagerSystem.dll
+c:\users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\FinancialManagerSystem\bin\FinancialManagerSystem.pdb
+c:\users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\FinancialManagerSystem\bin\ApplicationCore.dll
+c:\users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\FinancialManagerSystem\bin\ApplicationCore.pdb
+c:\users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\FinancialManagerSystem\obj\Debug\WebService.csprojResolveAssemblyReference.cache
+c:\users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\FinancialManagerSystem\obj\Debug\FinancialManagerSystem.dll
+c:\users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\FinancialManagerSystem\obj\Debug\FinancialManagerSystem.pdb

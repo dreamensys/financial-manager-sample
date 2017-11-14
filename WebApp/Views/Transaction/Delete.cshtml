@@ -1,0 +1,98 @@
+﻿@model WebApp.Models.TransactionViewModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+<p class="error">@ViewBag.ErrorMessage</p>
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Transaction</h4>
+    <hr />
+    @Html.HiddenFor(model => model.Id)
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Step)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Step)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NameOrigin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameOrigin)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OldBalanceOrg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OldBalanceOrg)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NewBalanceOrg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NewBalanceOrg)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NameDest)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameDest)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OldBalanceDest)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OldBalanceDest)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NewBalanceDest)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NewBalanceDest)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsFraud)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsFraud)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
