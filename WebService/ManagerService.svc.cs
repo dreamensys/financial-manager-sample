@@ -1,22 +1,24 @@
 ﻿using ApplicationCore.Contracts;
-using ApplicationCore.Entities;
 using ApplicationCore.Interfaces;
 using CrossCutting;
 using System.Linq;
 using System;
 using Newtonsoft.Json;
+using ApplicationCore.DTOs;
+using ApplicationCore.Entities;
 
 namespace WebService
 {
     public class ManagerService : IManagerTransaction
     {
-        public bool CreateNewTransaction(string jsonTransaction)
+        public bool CreateNewTransaction(string jsonTransactionDTO)
         {
-            Transaction transaction = JsonConvert.DeserializeObject<Transaction>(jsonTransaction);
+            TransactionDTO trnDTO = JsonConvert.DeserializeObject<TransactionDTO>(jsonTransactionDTO);
             var svTransaction = IoCFactory.Resolve<ITransactionService>();
             
             try
             {
+                var transaction = ToTransactionModel(trnDTO);
                 svTransaction.Add(transaction);
                 return true;
             }
@@ -41,13 +43,27 @@ namespace WebService
             }
         }
 
-        public Transaction GetTransactionById(int id)
+        public TransactionDTO GetTransactionById(int id)
         {
             var svTransaction = IoCFactory.Resolve<ITransactionService>();
 
             try
             {
-                return svTransaction.GetTransactionById(id);
+                var trn = svTransaction.GetTransactionById(id);
+                return new TransactionDTO()
+                {
+                    Id = trn.Id,
+                    Step = trn.Step,
+                    Type = trn.Type,
+                    Amount = trn.Amount,
+                    NameOrigin = trn.NameOrigin,
+                    OldBalanceOrg = trn.OldBalanceOrg,
+                    NewBalanceOrg = trn.NewBalanceDest,
+                    NameDest = trn.NameDest,
+                    OldBalanceDest = trn.OldBalanceDest,
+                    NewBalanceDest = trn.NewBalanceDest,
+                    IsFraud = trn.IsFraud
+                };
             }
             catch (Exception)
             {
@@ -55,18 +71,31 @@ namespace WebService
             }
         }
 
-        public Transaction[] GetTransactions()
+        public TransactionDTO[] GetTransactions()
         {
             var svTransaction = IoCFactory.Resolve<ITransactionService>();
-            return svTransaction.GetTransactions().ToArray();
+            return svTransaction.GetTransactions().Select( trn=> new TransactionDTO() {
+                Id = trn.Id,
+                Step = trn.Step,
+                Type = trn.Type,
+                Amount = trn.Amount,
+                NameOrigin = trn.NameOrigin,
+                OldBalanceOrg = trn.OldBalanceOrg,
+                NewBalanceOrg = trn.NewBalanceDest,
+                NameDest = trn.NameDest,
+                OldBalanceDest = trn.OldBalanceDest,
+                NewBalanceDest = trn.NewBalanceDest,
+                IsFraud = trn.IsFraud
+            }).ToArray();
         }
 
-        public bool UpdateTransaction(string jsonTransaction)
+        public bool UpdateTransaction(string jsonTransactionDTO)
         {
             var svTransaction = IoCFactory.Resolve<ITransactionService>();
-            Transaction transaction = JsonConvert.DeserializeObject<Transaction>(jsonTransaction);
+            TransactionDTO trnDTO = JsonConvert.DeserializeObject<TransactionDTO>(jsonTransactionDTO);
             try
             {
+                var transaction = ToTransactionModel(trnDTO);
                 svTransaction.Update(transaction);
                 return true;
             }
@@ -74,6 +103,23 @@ namespace WebService
             {
                 return false;
             }
+        }
+
+        private Transaction ToTransactionModel(TransactionDTO trn)
+        {
+            return new Transaction() {
+                Id = trn.Id,
+                Step = trn.Step,
+                Type = trn.Type,
+                Amount = trn.Amount,
+                NameOrigin = trn.NameOrigin,
+                OldBalanceOrg = trn.OldBalanceOrg,
+                NewBalanceOrg = trn.NewBalanceDest,
+                NameDest = trn.NameDest,
+                OldBalanceDest = trn.OldBalanceDest,
+                NewBalanceDest = trn.NewBalanceDest,
+                IsFraud = trn.IsFraud
+            };
         }
 
     }

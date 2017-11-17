@@ -3,7 +3,6 @@ using ApplicationCore.Services;
 using Infrastructure.Data;
 using Unity;
 using Unity.Lifetime;
-using WebApp.Services;
 
 namespace CrossCutting
 {

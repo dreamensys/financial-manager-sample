@@ -20,14 +20,14 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Step, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Step, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.Step, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
                 @Html.ValidationMessageFor(model => model.Step, "", new { @class = "text-danger" })
             </div>
         </div>
         <div class="form-group">
-            @Html.LabelFor(model => model.Type, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Type, htmlAttributes: new { @class = "control-label col-md-2",  })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Type, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.Type, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
                 @Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -35,7 +35,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Amount, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Amount, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.Amount, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
                 @Html.ValidationMessageFor(model => model.Amount, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -43,7 +43,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.NameOrigin, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.NameOrigin, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.NameOrigin, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
                 @Html.ValidationMessageFor(model => model.NameOrigin, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -52,21 +52,21 @@
         <div class="form-group">
             @Html.LabelFor(model => model.OldBalanceOrg, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.OldBalanceOrg, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.OldBalanceOrg, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
                 @Html.ValidationMessageFor(model => model.OldBalanceOrg, "", new { @class = "text-danger" })
             </div>
         </div>
         <div class="form-group">
             @Html.LabelFor(model => model.NewBalanceOrg, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.NewBalanceOrg, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.NewBalanceOrg, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
                 @Html.ValidationMessageFor(model => model.NewBalanceOrg, "", new { @class = "text-danger" })
             </div>
         </div>
         <div class="form-group">
             @Html.LabelFor(model => model.NameDest, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.NameDest, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.NameDest, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
                 @Html.ValidationMessageFor(model => model.NameDest, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -74,21 +74,21 @@
         <div class="form-group">
             @Html.LabelFor(model => model.OldBalanceDest, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.OldBalanceDest, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.OldBalanceDest, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
                 @Html.ValidationMessageFor(model => model.OldBalanceDest, "", new { @class = "text-danger" })
             </div>
         </div>
         <div class="form-group">
             @Html.LabelFor(model => model.NewBalanceDest, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.NewBalanceDest, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.NewBalanceDest, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
                 @Html.ValidationMessageFor(model => model.NewBalanceDest, "", new { @class = "text-danger" })
             </div>
         </div>
         <div class="form-group">
             @Html.LabelFor(model => model.IsFraud, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.IsFraud, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.IsFraud, new { htmlAttributes = new { @class = "form-control", @readonly = (User.IsInRole(WebApp.Models.RoleTypes.Administrator) || User.IsInRole(WebApp.Models.RoleTypes.Superintendent)) ? "": "readonly" } })
                 @Html.ValidationMessageFor(model => model.IsFraud, "", new { @class = "text-danger" })
             </div>
         </div>

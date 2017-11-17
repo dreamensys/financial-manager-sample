@@ -14,7 +14,7 @@ namespace WebApp.Helpers
             BasicHttpBinding binding = new BasicHttpBinding();
             ChannelFactory<T> factory = new ChannelFactory<T>(binding, endpoint);
             return factory.CreateChannel();
-          
+
         }
     }
 }

@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using System.ServiceModel;
-using System.Web;
 using System.Web.Mvc;
+using WebApp.Attributes;
 using WebApp.Models;
 using WebApp.Services;
 
 namespace WebApp.Controllers
 {
+    [Authorize]
     public class TransactionController : Controller
     {
         WebTransactionService transactionService = new WebTransactionService();
 
-        // GET: Transaction
+        
         public ViewResult Index(string sortOrder, string currentFilter, string searchString)
         {
             List<TransactionViewModel> list = GetTransactions();
@@ -33,24 +33,9 @@ namespace WebApp.Controllers
         {
             return transactionService.GetTransactions().ToList();
         }
+        
 
-        // GET: Transaction/Details/5
-        public ActionResult Details(int id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-
-            TransactionViewModel transaction = transactionService.GetTransactionById(id);
-            if (transaction == null)
-            {
-                return HttpNotFound();
-            }
-            return View(transaction);
-        }
-
-        // GET: Transaction/Create
+        [AuthorizeManager(Roles = RoleTypes.Administrator + "," +  RoleTypes.Assistant)]
         public ActionResult Create()
         {
             return View();
@@ -58,6 +43,7 @@ namespace WebApp.Controllers
 
         // POST: Transaction/Create
         [HttpPost]
+        [AuthorizeManager(Roles = RoleTypes.Administrator + "," + RoleTypes.Assistant)]
         public ActionResult Create(FormCollection collection)
         {
             try
@@ -75,7 +61,7 @@ namespace WebApp.Controllers
             }
         }
 
-        // GET: Transaction/Edit/5
+        [AuthorizeManager(Roles = RoleTypes.Administrator + "," + RoleTypes.Superintendent)]
         public ActionResult Edit(int id)
         {
             if (id == null)
@@ -90,8 +76,9 @@ namespace WebApp.Controllers
             return View(transaction);
         }
 
-        // POST: Transaction/Edit/5
+        
         [HttpPost]
+        [AuthorizeManager(Roles = RoleTypes.Administrator + "," + RoleTypes.Superintendent)]
         public ActionResult Edit(int id, FormCollection collection)
         {
             try
@@ -103,7 +90,7 @@ namespace WebApp.Controllers
                     return RedirectToAction("Index");
                 }
 
-                  return RedirectToAction("Index");
+                return RedirectToAction("Index");
             }
             catch
             {
@@ -129,37 +116,6 @@ namespace WebApp.Controllers
             return trn;
         }
 
-        // GET: Transaction/Delete/5
-        public ActionResult Delete(int id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            TransactionViewModel transaction = transactionService.GetTransactionById(id);
-            if (transaction == null)
-            {
-                return HttpNotFound();
-            }
-            return View(transaction);
-        }
-
-        // POST: Transaction/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                if(transactionService.DeleteTransaction(id))
-                {
-                    return RedirectToAction("Index");
-                }
-                return View();
-            }
-            catch
-            {
-                return View();
-            }
-        }
+      
     }
 }

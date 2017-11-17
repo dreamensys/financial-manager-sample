@@ -8,18 +8,26 @@
 <h2>Transactions</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @if (User.IsInRole(WebApp.Models.RoleTypes.Assistant) || User.IsInRole(WebApp.Models.RoleTypes.Administrator))
+    {
+        @Html.ActionLink("Create New", "Create")
+    }
 </p>
 @using (Html.BeginForm("Index", "Transaction", FormMethod.Get))
 {
     <p>
-        Find by: <br />   
-        IsFraud? 
-        @Html.CheckBox("IsFraud")<br />
-        NameDest:
-        @Html.TextBox("NameDest", ViewBag.CurrentFilter as string)<br />
+        @if (User.IsInRole(WebApp.Models.RoleTypes.Administrator) || User.IsInRole(WebApp.Models.RoleTypes.Manager))
+        {
+            @:Find by: <br />
+            @:IsFraud?
+            @Html.CheckBox("IsFraud"); @:<br />
+            @:NameDest:
+            @Html.TextBox("NameDest", ViewBag.CurrentFilter as string); @:<br />
+            @:<input type="submit" value="Search" />
+        }
+        
 
-        <input type="submit" value="Search" />
+        
     </p>
 }
 <table class="table">
@@ -100,9 +108,12 @@
                 @Html.DisplayFor(modelItem => item.IsFlaggedFraud)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                @if (User.IsInRole(WebApp.Models.RoleTypes.Administrator) || User.IsInRole(WebApp.Models.RoleTypes.Superintendent))
+                {
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id });
+                }
+               
+               
             </td>
         </tr>
     }

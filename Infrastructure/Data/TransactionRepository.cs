@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using ApplicationCore.Interfaces;
 using System.Linq;
+using ApplicationCore.DTOs;
 
 namespace Infrastructure.Data
 {
@@ -17,8 +18,7 @@ namespace Infrastructure.Data
 
         public IEnumerable<Transaction> GetTransactions()
         {
-            return ManagerContext.Transactions.ToList();
-           
+            return ManagerContext.Transactions;
         }
 
         public void Update(Transaction trn)

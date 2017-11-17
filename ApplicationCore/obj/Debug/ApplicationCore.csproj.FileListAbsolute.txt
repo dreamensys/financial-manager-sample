@@ -7,3 +7,4 @@ C:\Users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\A
 C:\Users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\ApplicationCore\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\ApplicationCore\obj\Debug\ApplicationCore.dll
 C:\Users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\ApplicationCore\obj\Debug\ApplicationCore.pdb
+C:\Users\angel-pc\Documents\Visual Studio 2017\Projects\FinancialManagerSystem\ApplicationCore\obj\Debug\ApplicationCore.csprojResolveAssemblyReference.cache

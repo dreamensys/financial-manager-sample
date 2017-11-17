@@ -68,6 +68,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -78,10 +79,6 @@
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj">
       <Project>{C492B9E4-0F81-4D97-A83C-FC113AE63958}</Project>
       <Name>Infrastructure</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WebApp\WebApp.csproj">
-      <Project>{41D17186-957B-446A-992A-C334924D3FEA}</Project>
-      <Name>WebApp</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

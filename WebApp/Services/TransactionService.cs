@@ -1,5 +1,6 @@
-﻿using ApplicationCore.Contracts;
-using ApplicationCore.Entities;
+﻿
+using ApplicationCore.Contracts;
+using ApplicationCore.DTOs;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -79,7 +80,7 @@ namespace WebApp.Services
 
         public bool CreateNewTransaction(TransactionViewModel trn)
         {
-            Transaction transaction = new Transaction()
+            TransactionDTO transaction = new TransactionDTO()
             {
                 Step = trn.Step,
                 Type = trn.Type,
@@ -110,7 +111,7 @@ namespace WebApp.Services
 
         public bool UpdateTransaction(TransactionViewModel trn)
         {
-            Transaction transaction = new Transaction()
+            TransactionDTO transaction = new TransactionDTO()
             {
                 Id = trn.Id,
                 Step = trn.Step,
