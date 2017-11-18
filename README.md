@@ -14,20 +14,20 @@ Before to launch the app, please keep in mind the following considerations:
 You can use one of the following user credentials to enter to the application, each user has a assigned role with different permissions.
 
 ### Assistant
-assistant@test.com
-Assistant_2017
+Email: assistant@test.com
+Password: Assistant_2017
 
 ### Manager
-manager@test.com
-Manager_2017
+Email: manager@test.com
+Password: Manager_2017
 
 ### Superintendent
-superintendent@test.com
-Superintendent_2017
+Email: superintendent@test.com
+Password: Superintendent_2017
 
 ### Administrator
-administrator@test.com
-Administrator_2017
+Email: administrator@test.com
+Password: Administrator_2017
 
 ## Some Technical overview
 - EF Database First.
