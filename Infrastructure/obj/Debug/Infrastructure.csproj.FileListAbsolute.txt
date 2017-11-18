@@ -13,3 +13,4 @@ C:\Users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\I
 C:\Users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\Infrastructure\obj\Debug\Infrastructure.csproj.GenerateResource.Cache
 C:\Users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\Infrastructure\obj\Debug\Infrastructure.dll
 C:\Users\angel-pc\documents\visual studio 2017\Projects\FinancialManagerSystem\Infrastructure\obj\Debug\Infrastructure.pdb
+C:\Users\angel-pc\Documents\Visual Studio 2017\Projects\FinancialManagerSystem\Infrastructure\obj\Debug\Infrastructure.Migrations.SeedTransactions.resources
