@@ -10,26 +10,26 @@ Before to launch the app, please keep in mind the following considerations:
 5. From Package Manager Console at WebApp Project, type "update-database" in order to create/update the database
 6. By starting the solution, the web app and the web service will run.
 
-##How to login to the application?
+## How to login to the application?
 You can use one of the following user credentials to enter to the application, each user has a assigned role with different permissions.
 
-###Assistant
+### Assistant
 assistant@test.com
 Assistant_2017
 
-###Manager
+### Manager
 manager@test.com
 Manager_2017
 
-###Superintendent
+### Superintendent
 superintendent@test.com
 Superintendent_2017
 
-###Administrator
+### Administrator
 administrator@test.com
 Administrator_2017
 
-##Some Technical overview
+## Some Technical overview
 - EF Database First.
 - Repository Pattern.
 - Inversion of Control.
@@ -37,10 +37,10 @@ Administrator_2017
 - Domain Driven Design.
 - WCF.
 
-##TODO
+## TODO
 - Implement security over the API access from client.
 
-##Author
+## Author
 Angel Soto
 dreamensys@gmail.com
 
